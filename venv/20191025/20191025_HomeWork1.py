@@ -20,5 +20,5 @@ B = np.array([2400, 1000])
 x = (100, None)
 y = (0, 450)
 
-res = linprog(c, A, B, bounds=(x, y))
+res = linprog(c, A, B, bounds=(x, y))# bounds = 邊界
 print(res)
