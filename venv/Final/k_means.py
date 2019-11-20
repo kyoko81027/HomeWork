@@ -14,7 +14,7 @@ reArr = kms.toKMeamsList(df,3)
 cl_pred = reArr[0]#分群結果
 
 
-df = pd.DataFrame({'x':cl_pred+1,'y':list[0:,7]})#在和錄取率做分群
+df = pd.DataFrame({'x':cl_pred,'y':list[0:,7]})#在和錄取率做分群
 reArr = kms.toKMeamsList(df,3)
 y_pred = reArr[0]#分群結果
 centroids = reArr[1]  #各群中心點(X,Y)的位置
