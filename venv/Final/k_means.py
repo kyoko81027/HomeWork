@@ -26,7 +26,7 @@ centroids = reArr[1]  #各群中心點(X,Y)的位置
 plt.figure(figsize=(10, 6))
 plt.ylabel('Chance of Admit ')
 plt.xlabel('cluster')
-plt.xticks(range(len(y_pred)))
+plt.xticks(range(len(y_pred)))#設定為整數
 plt.scatter(df['x'],df['y'], c=y_pred) #C是第三維度 顏色做維度
 plt.scatter(centroids[:, 0], centroids[:, 1],c='red') #標群心
 plt.show()
