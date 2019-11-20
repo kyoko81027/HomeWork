@@ -6,12 +6,7 @@ import toKMeans as km
 kms = km.toKMeans
 csvtemp = csvt.loadCsv
 
-
-df = pd.DataFrame({
-    'x': [12, 20, 28, 18, 29, 33, 24, 45, 45, 52, 51, 52, 55, 53, 55, 61, 64, 69, 72],
-    'y': [39, 36, 30, 52, 54, 46, 55, 59, 63, 70, 66, 63, 58, 23, 14, 8, 19, 7, 24]
-})
-list = csvtemp.loadCSVfile2()
+list = csvtemp.loadCSVfile2()#讀資料
 
 df = pd.DataFrame(list[0:,:7]) #將前7個欄位做一次分群
 
