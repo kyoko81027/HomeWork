@@ -11,8 +11,8 @@ df2=pd.read_csv("dataset.csv",encoding="big5")
 df3=df2[['GRE Score','TOEFL Score','University Rating','SOP','LOR ','CGPA','Research','Chance of Admit ']]
 df3.head()
 
-x=df3[['GRE Score','TOEFL Score','University Rating','SOP','LOR ','CGPA']]
-y=df3[['Research']]
+x=df3[['GRE Score','TOEFL Score','University Rating','SOP','LOR ','CGPA','Research']]
+y=df3[['Chance of Admit ']]
 
 x_train,x_test,y_train,y_test=train_test_split(x,y,test_size=0.3,random_state=20191120) #random_state 種子值
 
