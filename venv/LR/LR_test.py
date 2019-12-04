@@ -29,9 +29,10 @@ y_shuffle = np.array(y_shuffle, dtype=int).ravel()
 
 from sklearn.linear_model  import LogisticRegression
 lr=LogisticRegression()
+#lr=LinearRegression()
 lr.fit(X_shuffle,y_shuffle)
 
 # 印出係數
-print(lr.coef_)
+#print(lr.coef_)
 # 印出截距
 print(lr.intercept_ )
