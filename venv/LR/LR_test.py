@@ -14,8 +14,11 @@ x=df3[['GRE Score','TOEFL Score','University Rating','SOP','LOR ','CGPA','Resear
 y=df3[['Chance of Admit ']]
 
 
-y[y['Chance of Admit '] >= 0.7] = 1
-y[y['Chance of Admit '] < 0.7] = 0
+#y[y['Chance of Admit '] >= 0.7] = 1
+#y[y['Chance of Admit '] < 0.7] = 0
+y = np.where(y>=0.6,1,0).tolist()
+
+
 #print(y)
 x_train,x_test,y_train,y_test=train_test_split(x,y,test_size=0.3,random_state=20191120) #random_state 種子值
 
@@ -74,3 +77,4 @@ auc = metrics.roc_auc_score(y_test, y_pred_proba)
 plt.plot(fpr,tpr,label="data 1, auc="+str(auc))
 plt.legend(loc=4)
 plt.show()
+

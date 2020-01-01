@@ -14,8 +14,8 @@ exam_X=df3[['GRE Score','TOEFL Score','University Rating','SOP','LOR ','CGPA','R
 exam_y=df3[['Chance of Admit ']]
 
 for i in exam_y:
-    exam_y.loc[ exam_y[i]>=0.6,i]=1
-    exam_y.loc[ exam_y[i]<0.6,i]=0
+    exam_y.loc[ exam_y[i]>=0.7,i]=1
+    exam_y.loc[ exam_y[i]<0.7,i]=0
 #print(exam_y)
 
 examDict=df3
