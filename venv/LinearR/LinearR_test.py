@@ -34,4 +34,10 @@ print('模型得分為',round(model.score(test_X,test_y),4))
 rDf=examDf.corr()
 print(rDf)
 
+# set figure size
+import matplotlib.pyplot as plt
+plt.rcParams['figure.figsize'] = (9, 9)
 
+import seaborn as sns
+sns.heatmap(rDf, square=True ,vmax=1.0, linecolor='white', annot=True)
+plt.show()
