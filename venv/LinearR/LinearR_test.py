@@ -29,14 +29,9 @@ print('訓練集大小',train_X.shape,train_y.shape)
 print('測試集大小',test_X.shape,test_y.shape)
 from sklearn.linear_model import LinearRegression
 model=LinearRegression()
-#train_X=train_X.values.reshape(-1,1)
-#train_y=train_y.values.reshape(-1,1)
-#test_X=test_X.values.reshape(-1,1)
-#test_y=test_y.values.reshape(-1,1)
-#print('訓練集大小',train_X.shape,train_y.shape)
-#print('測試集大小',test_X.shape,test_y.shape)
-
 model.fit(train_X,train_y)
 print('模型得分為',round(model.score(test_X,test_y),4))
 rDf=examDf.corr()
 print(rDf)
+
+
